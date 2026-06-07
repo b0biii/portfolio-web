@@ -1,7 +1,3 @@
-// Server Component — pure display, no interactivity needed.
-// No "use client" directive = this renders on the server by default in Next.js.
-
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { User } from "lucide-react";
 
 const highlights = [
@@ -19,8 +15,6 @@ export default function AboutPanel() {
                 <User className="w-3.5 h-3.5 text-[#484f58]" />
                 <span className="text-[10px] text-[#484f58] uppercase tracking-widest">about.md</span>
             </div>
-
-            <ScrollArea className="flex-1">
                 <div className="p-5 text-xs text-[#8b949e] leading-relaxed space-y-5 font-mono">
                     <div>
                         <p className="text-emerald-400 font-bold mb-2">## Hello, World! {":]"}</p>
@@ -56,7 +50,6 @@ export default function AboutPanel() {
                         </p>
                     </div>
                 </div>
-            </ScrollArea>
         </div>
     );
 }

@@ -1,10 +1,15 @@
-// Server Component — pure display, no interactivity needed.
+"use client";
 
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Layers } from "lucide-react";
 import { expDetails } from "../data";
+import { useState } from "react";
+import ExpDetailDialogue from "./experience-dialog";
+
 
 export default function ExperiencePanel() {
+    const [selectedId, setSelectedId] = useState<string | null>(null);
+
     return (
         <div className="flex flex-col h-full">
             <div className="flex items-center gap-2 px-5 py-3 border-b border-[#21262d]">
@@ -22,9 +27,10 @@ export default function ExperiencePanel() {
                             <div className="rounded-md border border-[#21262d] overflow-hidden">
                                 {group.items.map((item, i) => (
                                     <div
-                                        key={item.name}
+                                        key={item.id}
                                         className={`flex items-center justify-between px-3.5 py-2.5 text-xs ${i !== group.items.length - 1 ? "border-b border-[#21262d]" : ""
-                                            } hover:bg-[#161b22] transition-colors`}
+                                            } hover:bg-[#161b22] transition-colors hover:cursor-pointer`}
+                                        onClick={() => setSelectedId(item.id)}
                                     >
                                         <span className="text-white font-mono font-medium">{item.name}</span>
                                         <span className="text-[#484f58] font-mono">{item.note}</span>
@@ -35,6 +41,12 @@ export default function ExperiencePanel() {
                     ))}
                 </div>
             </ScrollArea>
+            <ExpDetailDialogue 
+                expId = {selectedId}
+                onClose = {() => setSelectedId(null)}
+            >
+            </ExpDetailDialogue>
+
         </div>
     );
 }
