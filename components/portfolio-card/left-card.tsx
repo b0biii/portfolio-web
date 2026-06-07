@@ -63,7 +63,7 @@ export default function LeftPanel({ activeNav, onNavClick }: LeftPanelProps) {
     }, []);
 
     return (
-        <div className="w-72 shrink-0 border-r border-[#21262d] flex flex-col">
+        <div className="w-72 min-h-screen shrink-0 border-r border-[#21262d] flex flex-col">
 
             {/* JSDoc header */}
             <div className="px-5 pt-5 pb-3 text-xs leading-relaxed">
@@ -71,9 +71,9 @@ export default function LeftPanel({ activeNav, onNavClick }: LeftPanelProps) {
                 <span className="text-[#6e7681]">{" * @author"}</span>
                 <span className="text-sky-400"> Ian Nathaniel Lapuz</span><br />
                 <span className="text-[#6e7681]">{" * @focus"}</span>
-                <span className="text-yellow-400"> full-stack | data</span><br />
+                <span className="text-yellow-400"> data | full stack</span><br />
                 <span className="text-[#6e7681]">{" * @status"}</span>
-                <span className="text-emerald-400"> open to work</span><br />
+                <span className="text-emerald-400"> seeking new roles</span><br />
                 <span className="text-[#6e7681]">{" */"}</span>
             </div>
 
@@ -194,7 +194,7 @@ export default function LeftPanel({ activeNav, onNavClick }: LeftPanelProps) {
                     size="sm"
                     className="ml-auto h-7 text-[10px] bg-sky-400 text-black hover:bg-sky-300 font-bold tracking-wide px-3"
                 >
-                    Email Me
+                    Resume
                 </Button>
             </div>
         </div>
