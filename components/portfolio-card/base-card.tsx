@@ -30,7 +30,7 @@ export default function PortfolioCard() {
             </div>
 
             <CardContent className="p-0">
-                <div className="flex h-[70vh]">
+                <div className="flex h-[75vh]">
                     <LeftPanel activeNav={activeNav} onNavClick={setActiveNav} />
                     <div className="flex-1 flex flex-col bg-[#0a0d12] overflow-hidden">
                         <RightPanel activeNav={activeNav} />
