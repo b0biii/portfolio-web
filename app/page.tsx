@@ -1,10 +1,10 @@
 import PortfolioCard from "@/components/portfolio-card/base-card";
 
+
 export default function Home() {
   return (
-    <div>
-      <main>
-        <div className="min-h-screen bg-[#080b12] flex items-center justify-center p-6 font-mono">
+    <div className="h-screen overflow-hidden bg-[#080b12] font-mono">
+      <main className="h-full flex items-center justify-center p-4">
           {/* Grid background */}
           {/*
           <div
@@ -18,7 +18,6 @@ export default function Home() {
           />
           */}
           <PortfolioCard />
-        </div>
       </main>
     </div>
   );

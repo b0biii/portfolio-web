@@ -63,7 +63,7 @@ export default function LeftPanel({ activeNav, onNavClick }: LeftPanelProps) {
     }, []);
 
     return (
-        <div className="w-72 min-h-screen shrink-0 border-r border-[#21262d] flex flex-col">
+        <div className="w-72 h-full shrink-0 border-r border-[#21262d] flex flex-col overflow-hidden">
 
             {/* JSDoc header */}
             <div className="px-5 pt-5 pb-3 text-xs leading-relaxed">
@@ -149,7 +149,7 @@ export default function LeftPanel({ activeNav, onNavClick }: LeftPanelProps) {
             </div>
 
             {/* Skills */}
-            <div className="mb-auto px-5 py-4">
+            <div className="px-5 py-4 overflow-y-auto">
                 <div className="flex items-center gap-2 mb-2.5">
                     <Code2 className="w-3.5 h-3.5 text-[#484f58]" />
                     <span className="text-[10px] text-[#484f58] uppercase tracking-widest">tech</span>
