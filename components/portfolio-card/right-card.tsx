@@ -16,21 +16,19 @@ export default function RightPanel({ activeNav }: RightPanelProps) {
 
     return (
         <div className="h-full flex flex-col">
-            <ScrollArea className="flex-1 min-h-0">
-                {activeNav === "about" && <AboutPanel />}
-                {activeNav === "experience" && !selectedElement && (
-                    <ExperiencePanel/>
-                )}
-                {activeNav === "projects" && !selectedElement && (
-                    <ProjectsPanel onSelect={setSelectedElement} />
-                )}
-                {activeNav === "projects" && selectedElement && (
-                    <ProjectDetailPanel
-                        projectId={selectedElement}
-                        onBack={() => setSelectedElement(null)}
-                    />
-                )}
-            </ScrollArea>
+            {activeNav === "about" && <AboutPanel />}
+            {activeNav === "experience" && !selectedElement && (
+                <ExperiencePanel/>
+            )}
+            {activeNav === "projects" && !selectedElement && (
+                <ProjectsPanel onSelect={setSelectedElement} />
+            )}
+            {activeNav === "projects" && selectedElement && (
+                <ProjectDetailPanel
+                    projectId={selectedElement}
+                    onBack={() => setSelectedElement(null)}
+                />
+            )}
         </div>
     );
 }
