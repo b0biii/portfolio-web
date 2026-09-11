@@ -46,7 +46,6 @@ export default function ExperiencePanel() {
                 onClose = {() => setSelectedId(null)}
             >
             </ExpDetailDialogue>
-
         </div>
     );
 }

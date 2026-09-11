@@ -13,13 +13,13 @@ export default function PortfolioCard() {
     const [activeNav, setActiveNav] = useState("about");
 
     return (
-        <Card className="relative w-full max-w-7xl bg-[#0d1117] border border-[#21262d] shadow-2xl shadow-black/60 overflow-hidden">
+        <Card className="flex flex-col py-0 gap-0 relative w-full h-full max-h-[900px] max-w-7xl bg-[#0d1117] border border-[#21262d] shadow-2xl shadow-black/60 overflow-hidden">
             {/* Top accent glow */}
             <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-sky-400/70 to-transparent" />
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-10 bg-sky-400/8 blur-2xl rounded-full" />
 
             {/* Window chrome */}
-            <div className="flex items-center gap-2 px-4 pb-3 border-b border-[#21262d]">
+            <div className="flex items-center gap-2 px-4 py-4 border-b border-[#21262d]">
                 <Circle className="w-3 h-3 fill-red-500 text-red-500" />
                 <Circle className="w-3 h-3 fill-yellow-400 text-yellow-400" />
                 <Circle className="w-3 h-3 fill-emerald-400 text-emerald-400" />
@@ -29,8 +29,8 @@ export default function PortfolioCard() {
                 <Terminal className="w-3.5 h-3.5 text-[#484f58] ml-auto" />
             </div>
 
-            <CardContent className="p-0">
-                <div className="flex h-[75vh]">
+            <CardContent className="p-0 flex flex-col flex-1 min-h-0">
+                <div className="flex flex-1 min-h-0">
                     <LeftPanel activeNav={activeNav} onNavClick={setActiveNav} />
                     <div className="flex-1 flex flex-col bg-[#0a0d12] overflow-hidden">
                         <RightPanel activeNav={activeNav} />
