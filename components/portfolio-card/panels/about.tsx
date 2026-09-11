@@ -25,7 +25,7 @@ export default function AboutPanel() {
                     <div>
                         <p className="text-emerald-400 font-bold mb-2">## Hello, World! {":]"}</p>
                         <p>
-                            I&apos;m a BS Computer Science fresh graduate from the University of the Philippines - Baguio, who loves being able to build/develop tools and applications
+                            I&apos;m a BS Computer Science graduate from the University of the Philippines - Baguio, currently working as a Software Engineer @ Vyte, who loves being able to build/develop tools and applications
                             that help businesses move faster and optimize their workflows.
                         </p>
                     </div>
@@ -50,9 +50,9 @@ export default function AboutPanel() {
                     <div>
                         <p className="text-amber-400 font-bold mb-2">## When not coding</p>
                         <p>
-                            You&apos;ll probably find me doing laps on any racing track, with my trusty controller,
+                            You&apos;ll probably find me sitting in my simulator doing laps on the Nordschleife,
                             or tinkering with electronics or software that spark my curiosity.
-                            Maybe even deep in the rabbit hole of which computer games to play next.
+                            Well, I may not even be reachable since I might be out there in a mountain, hiking.
                         </p>
                     </div>
                 </div>
